@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.project-card {
+    width: 100%;
+    padding: 2%;
+    text-align: center;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.project-wrapper {
+    display: flex;
+    direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+}
+
+.project-card img {
+    border-radius: 50%;
+    height: 180px;
+    width: 180px;
+    margin-top: .5%;
+}
+.project-card h3 {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-size: 40px;
+    color: #672901;
+}
