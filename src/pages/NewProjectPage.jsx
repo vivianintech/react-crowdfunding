@@ -1,8 +1,8 @@
 import React from "react";
 import NewProjectForm from "../components/NewProjectForm/NewProjectForm";
 
-function ProjectForm() {
-    return <NewProjectForm/>;
+function NewProjectPage() {
+    return <NewProjectForm />;
 }
 
-export default ProjectForm;
+export default NewProjectPage;

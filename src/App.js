@@ -12,7 +12,6 @@ function App() {
     <Router>
       <div>
         <Nav />
-        
         <Switch>
           <Route path="/projects/:id">
             <ProjectPage />
@@ -22,14 +21,14 @@ function App() {
             <LoginPage />
           </Route>
 
+          <Route path="/project/create">
+            <NewProjectPage />
+          </Route>
+
           <Route path="/">
             <HomePage />
           </Route>
-
-          <Route path="/projects/create">
-            <NewProjectPage />
-          </Route>
-        
+          
         </Switch>
       </div>
     </Router>
