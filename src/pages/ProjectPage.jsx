@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 function ProjectPage() {
     const [projectData, setProjectData] = useState({ pledges: [] });
@@ -30,6 +30,9 @@ function ProjectPage() {
                     )
                 })}
             </ul>
+            <Link className="create-pledge" to={`/pledge/create`}>
+                Donate to the project
+            </Link>
         </div>
     )
 }

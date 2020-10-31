@@ -1,13 +1,17 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 
 function NewPledgeForm() {
+
+    const project_id = toString(window.localStorage.getItem("project_id"));
+
     const [pledgeData, setPledgeData] = useState({
         amount: 0,
         comment: "",
         anonymous: false,
-        project_id:""
+        project_id: `${project_id}`
     });
+    
 
     const history = useHistory();
 
@@ -19,10 +23,10 @@ function NewPledgeForm() {
         }));
     };
 
-    const postpledgeData = async () => {
+    const postPledgeData = async () => {
         const token = window.localStorage.getItem("token")
         const response = await
-        fetch(`${process.env.REACT_APP_API_URL}projects/`,
+        fetch(`${process.env.REACT_APP_API_URL}pledges/`,
         {
             method: "post",
             headers: {
@@ -38,7 +42,7 @@ function NewPledgeForm() {
     const handleProjectSubmit = (e) => {
         e.preventDefault();
         if(pledgeData.amount && pledgeData.comment && pledgeData.anonymous && pledgeData.project_id) {
-            postpledgeData().then((response) => {
+            postPledgeData().then((response) => {
                 console.log(response);
             });
         }
@@ -56,11 +60,7 @@ function NewPledgeForm() {
             </div>
             <div>
                 <label htmlFor="anonymous">anonymous</label>
-                <input type="number" id="anonymous" onChange={handleProjectChange}/>
-            </div>
-            <div>
-                <label htmlFor="project_id">project_id</label>
-                <input type="url" id="project_id" placeholder="https://via.placeholder.com/300.jpg" onChange={handleProjectChange}/>
+                <input type="boolean" id="anonymous" onChange={handleProjectChange}/>
             </div>
 
             <button type="submit" onClick={handleProjectSubmit}>Submit</button>

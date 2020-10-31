@@ -1,7 +1,8 @@
 import React from "react";
+import NewPledgeForm from "../components/NewPledgeForm/NewPledgeForm";
 
 function NewPledgePage () {
-    return <h1>This is new pledge</h1>;
+    return <NewPledgeForm />;
 }
 
 export default NewPledgePage;
