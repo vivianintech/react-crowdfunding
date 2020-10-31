@@ -36,15 +36,7 @@ function NewProjectForm() {
 
     const handleProjectSubmit = (e) => {
         e.preventDefault();
-        if(
-            projectData.title &&
-            projectData.description &&
-            projectData.goal &&
-            projectData.image &&
-            projectData.is_open &&
-            projectData.date_created &&
-            projectData.date_updated
-        ) {
+        if(projectData.title&&projectData.description&&projectData.goal&&projectData.image&&projectData.is_open&&projectData.date_created&&projectData.date_updated) {
             postProjectData().then((response) => {
                 console.log(response);
             });
