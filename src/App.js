@@ -6,6 +6,7 @@ import ProjectPage from "./pages/ProjectPage";
 import "./App.css";
 import LoginPage from './pages/LoginPage';
 import NewProjectPage from './pages/NewProjectPage';
+import NewPledgePage from './pages/NewPledgePage';
 
 function App() {
   return (
@@ -23,6 +24,10 @@ function App() {
 
           <Route path="/project/create">
             <NewProjectPage />
+          </Route>
+
+          <Route path="/pledge/create">
+            <NewPledgePage />
           </Route>
 
           <Route path="/">
