@@ -15,6 +15,9 @@ function ProjectPage() {
         });
     }, []);
 
+    const projectId = window.localStorage.setItem("projectId", id);
+    console.log(projectId);
+
     return (
         <div>
             <h2>{projectData.title}</h2>
