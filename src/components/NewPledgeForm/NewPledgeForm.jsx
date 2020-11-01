@@ -3,13 +3,13 @@ import { useHistory, useParams } from "react-router-dom";
 
 function NewPledgeForm() {
 
-    const project_id = toString(window.localStorage.getItem("project_id"));
+    const projectId = window.localStorage.getItem("projectId");
 
     const [pledgeData, setPledgeData] = useState({
         amount: 0,
         comment: "",
         anonymous: false,
-        project_id: `${project_id}`
+        project_id: `${projectId}`
     });
     
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import "./Nav.css";
 import home from "./School.svg";
@@ -7,6 +7,7 @@ import home2 from "./Notes.svg";
 import userImage from "./sitting-1.svg";
 
 function Nav() {
+
     return (
         <div className="button-area">
 
@@ -56,6 +57,7 @@ function Nav() {
                     
                 </div>
             </div>
+            
         
             <div className="user">
                 <div className="user-img">

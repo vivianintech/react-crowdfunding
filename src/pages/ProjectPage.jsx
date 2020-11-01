@@ -11,12 +11,10 @@ function ProjectPage() {
             return results.json();
         })
         .then((data) => {
+            window.localStorage.setItem("projectId", id);
             setProjectData(data)
         });
     }, []);
-
-    const projectId = window.localStorage.setItem("projectId", id);
-    console.log(projectId);
 
     return (
         <div>
@@ -36,6 +34,15 @@ function ProjectPage() {
             <Link className="create-pledge" to={`/pledge/create`}>
                 Donate to the project
             </Link>
+
+            <Link className="update-project" to={`/project/update`}>
+                Update this project
+            </Link>
+
+            <Link className="delete-project" to={`/project/delete`}>
+                Delete this project
+            </Link>
+
         </div>
     )
 }

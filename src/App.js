@@ -7,6 +7,8 @@ import "./App.css";
 import LoginPage from './pages/LoginPage';
 import NewProjectPage from './pages/NewProjectPage';
 import NewPledgePage from './pages/NewPledgePage';
+import UpdateProjectPage from './pages/UpdateProjectPage';
+import DeleteProjectPage from './pages/DeleteProjectPage';
 
 function App() {
   return (
@@ -24,6 +26,14 @@ function App() {
 
           <Route path="/project/create">
             <NewProjectPage />
+          </Route>
+
+          <Route path="/project/update">
+            <UpdateProjectPage />
+          </Route>
+
+          <Route path="/project/delete">
+            <DeleteProjectPage />
           </Route>
 
           <Route path="/pledge/create">

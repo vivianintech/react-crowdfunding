@@ -40,6 +40,7 @@ function NewProjectForm() {
         if(projectData.title && projectData.description && projectData.goal && projectData.image) {
             postProjectData().then((response) => {
                 console.log(response);
+                history.push("/projects");
             });
         }
     };
