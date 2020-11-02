@@ -26,13 +26,18 @@ function LoginForm() {
             body: JSON.stringify(credentials),
         });
         return response.json();
-    }
+    };
+
+    const { id } = useParams();
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (credentials.username && credentials.password) {
             postData().then((response) => {
                 window.localStorage.setItem("token", response.token);
+                window.localStorage.setItem("username", credentials.username);
+                window.localStorage.setItem("userId", id);
                 history.push("/");
             });
         }
@@ -55,7 +60,7 @@ function LoginForm() {
                 <input
                     type="password"
                     id="password"
-                    placeholder="Enter username"
+                    placeholder="Enter Password"
                     onChange={handleChange}
                 />
             </div>

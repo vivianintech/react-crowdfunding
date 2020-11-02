@@ -5,14 +5,17 @@ import home from "./School.svg";
 import home1 from "./Library.svg";
 import home2 from "./Notes.svg";
 import userImage from "./sitting-1.svg";
+import LoginControl from "../LoginControl/LoginControl";
 
 function Nav() {
+    const token = window.localStorage.getItem("token");
+    const username = window.localStorage.getItem("username");
 
     return (
         <div className="button-area">
 
             <div className="website-name">
-                COMPUTEN
+                <p>{"{COMPUTEN}"}</p>
             </div>
             
             <div className="nav-link">
@@ -57,9 +60,9 @@ function Nav() {
                     
                 </div>
             </div>
-            
-            <div className="sign-up">
-                <Link className="nav-item" to="/users">Sign Up</Link>
+
+            <div>
+                <LoginControl />
             </div>
         
             <div className="user">
@@ -68,10 +71,10 @@ function Nav() {
                 </div>
 
                 <div className="user-name">
-                    <Link to="users/:id"></Link>
+                    <Link to="users/:id"> { username } </Link>
                 </div>
-                
             </div>
+            
         </div>
     )
 }

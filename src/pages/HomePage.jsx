@@ -16,7 +16,10 @@ function HomePage() {
 
     return (
     <div className="project-space">
-        <h1>yufujgj</h1>
+        <div>
+            <h1>Our Vision</h1>
+            <h1>Our Purpose</h1>
+        </div>
         <div id="project-list">
                 {projectList.map((projectData, key) => {
                     return <ProjectCard key={key} projectData={projectData}/>;
