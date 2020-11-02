@@ -12,7 +12,7 @@
   }
 
 .website-name {
-    font-size: 35px;
+    font-size: 20px;
     font-weight: bolder;
     font-family: 'Syne Mono', monospace;
     color: white;
@@ -80,4 +80,24 @@
   color: white;
   padding-bottom: 5px;
   font-family: 'Syne Mono', monospace;
+}
+
+.loggin-control {
+  display: flex;
+  direction: row;
+  width: 120%;
+  padding-right: 20px;
+  justify-self: center;
+}
+
+.navigation h4 {
+  color: white;
+  text-decoration: none;
+  font-family: 'Syne Mono', monospace;
+  font-size: 15px;
+  font-weight: bold;
+  border: solid;
+  border-radius: 5px;
+  padding: 1%;
+  width: 80px;
 }

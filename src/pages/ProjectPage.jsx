@@ -32,11 +32,11 @@ function ProjectPage() {
                 })}
             </ul>
             <Link className="create-pledge" to={`/pledge/create`}>
-                Donate to the project
+                Donate to the project <br></br>
             </Link>
 
             <Link className="update-project" to={`/project/update`}>
-                Update this project
+                Update this project <br></br>
             </Link>
 
             <Link className="delete-project" to={`/project/delete`}>

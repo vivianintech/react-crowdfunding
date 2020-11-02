@@ -64,16 +64,6 @@ function Nav() {
             <div>
                 <LoginControl />
             </div>
-        
-            <div className="user">
-                <div className="user-img">
-                    <img src={ userImage }/>
-                </div>
-
-                <div className="user-name">
-                    <Link to="users/:id"> { username } </Link>
-                </div>
-            </div>
             
         </div>
     )

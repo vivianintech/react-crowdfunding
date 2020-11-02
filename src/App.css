@@ -11,6 +11,11 @@
   width: 30%;
 }
 
+.vision {
+  width: 30%;
+  justify-content: center;
+}
+
 body {
   margin: 0;
   padding: 0;

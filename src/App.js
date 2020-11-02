@@ -26,7 +26,7 @@ function App() {
             <LoginPage />
           </Route>
 
-          <Route path="/users/:id">
+          <Route path="/users/:username">
             <UserPage />
           </Route>
 

@@ -2,50 +2,35 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from "react-router-dom";
 
 function UserPage() {
-    // const [userData, setUserData] = useState();
-    const { id } = useParams();
+    const [userData, setUserData] = useState(window.localStorage.getItem("username"));
 
-    const initialUserData = async () => {
-        const token = window.localStorage.getItem("token")
-        const response = await
-        fetch(`${process.env.REACT_APP_API_URL}users/${id}`,
-        {
-            method: "get",
-            headers: {
-                "Authorization": `Token ${token}`,
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(),
-        }
-        );
-        return response.json();
-    };
-
-    const [userData, setUserData] = useState(initialUserData);
+    const { username } = useParams();
 
     useEffect(() => {
-        fetch(`${process.env.REACT_APP_API_URL}users/${id}`)
+        fetch(`${process.env.REACT_APP_API_URL}users/${username}`)
         .then((results) => {
             return results.json();
         })
         .then((data) => {
             setUserData(data)
         });
-    }, []);
+    });
 
     return (
         <div>
             <div>
-                <img src={userData.user_image}/>
+                <h2>User Name: {userData.username}</h2>
+                <h2>Email: {userData.email}</h2>
+                <h2>Phone Number: {userData.phone_number}</h2>
+                <h2>Address: {userData.address}</h2>
             </div>
             
-            <h2>User Name: {userData.username}</h2>
-            <h2>Email: {userData.email}</h2>
-            <h2>Address: {userData.address}</h2>
-            <h2>Phone Number: {userData.phone_number}</h2>
+            <div>
+                <image src={userData.profile_image}/>
+            </div>
 
         </div>
     )
-}
+};
 
 export default UserPage;
