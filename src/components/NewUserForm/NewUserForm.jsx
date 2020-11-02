@@ -7,7 +7,7 @@ function NewUserForm() {
         email: "",
         phone_number: "",
         address: "",
-        profile_image: ""
+        profile_image: "",
         password: ""
     });
 
@@ -15,8 +15,8 @@ function NewUserForm() {
 
     const handleUserChange = (e) => {
         const { id, value } = e.target;
-        setUserData((prevProjectData) => ({
-            ...prevProjectData,
+        setUserData((prevUserData) => ({
+            ...prevUserData,
             [id]:value,
         }));
     };
@@ -37,7 +37,7 @@ function NewUserForm() {
 
     const handleUserSubmit = (e) => {
         e.preventDefault();
-        if(projectData.title && projectData.description && projectData.goal && projectData.image) {
+        if(userData.username && userData.email && userData.phone_number && userData.address && userData.profile_image && userData.password) {
             postUserData().then((response) => {
                 console.log(response);
                 history.push("/projects");
@@ -56,7 +56,19 @@ function NewUserForm() {
                 <input type="text" id="email" onChange={handleUserChange}/>
             </div>
             <div>
-                <label htmlFor="password">Goal</label>
+                <label htmlFor="phone_number">Phone Number</label>
+                <input type="text" id="phone_number" onChange={handleUserChange}/>
+            </div>
+            <div>
+                <label htmlFor="address">Address</label>
+                <input type="text" id="address" onChange={handleUserChange}/>
+            </div>
+            <div>
+                <label htmlFor="profile_image">Profile Image</label>
+                <input type="url" id="profile_image" onChange={handleUserChange}/>
+            </div>
+            <div>
+                <label htmlFor="password">Password</label>
                 <input type="password" id="password" onChange={handleUserChange}/>
             </div>
 

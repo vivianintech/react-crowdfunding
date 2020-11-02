@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useParams,Link } from 'react-router-dom';
 import "./Nav.css";
 import home from "./School.svg";
 import home1 from "./Library.svg";
@@ -12,7 +12,7 @@ function Nav() {
         <div className="button-area">
 
             <div className="website-name">
-                HELLO-WORLD-4U
+                COMPUTEN
             </div>
             
             <div className="nav-link">
@@ -58,6 +58,9 @@ function Nav() {
                 </div>
             </div>
             
+            <div className="sign-up">
+                <Link className="nav-item" to="/users">Sign Up</Link>
+            </div>
         
             <div className="user">
                 <div className="user-img">
@@ -65,7 +68,7 @@ function Nav() {
                 </div>
 
                 <div className="user-name">
-                    User Name
+                    <Link to="users/:id"></Link>
                 </div>
                 
             </div>
