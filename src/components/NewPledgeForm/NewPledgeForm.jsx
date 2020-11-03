@@ -44,6 +44,7 @@ function NewPledgeForm() {
         if(pledgeData.amount && pledgeData.comment && pledgeData.anonymous && pledgeData.project_id) {
             postPledgeData().then((response) => {
                 console.log(response);
+                history.push("/");
             });
         }
     };
@@ -60,7 +61,11 @@ function NewPledgeForm() {
             </div>
             <div>
                 <label htmlFor="anonymous">anonymous</label>
-                <input type="boolean" id="anonymous" onChange={handleProjectChange}/>
+                <select type="boolean" id="anonymous" onChange={handleProjectChange}>
+                    <option  value="" disabled selected>--Select an option--</option>
+                    <option  value="true">Yes</option>
+                    <option  value="false">No</option>
+                </select>
             </div>
 
             <button type="submit" onClick={handleProjectSubmit}>Submit</button>
