@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
 function ProjectPage() {
 
@@ -25,11 +25,15 @@ function ProjectPage() {
                 history.push("/projects");
             });
     };
+    const handleProjectCancel = (e) => {
+        history.push("/projects");
+};
 
     return (
         <form>
-            <div>something to test</div>
+            <div>Are you sure you want to delete this project?</div>
             <button type="submit" onClick={handleProjectDelete}>Delete Project</button>
+            <button type="reset" onClick={handleProjectCancel}>Keep This Project</button>
         </form>
     )
 }
