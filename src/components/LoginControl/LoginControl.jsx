@@ -1,11 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
 
 
 function LoginControl() {
     const token = window.localStorage.getItem("token");
-    const username = window.localStorage.getItem("username")
-
+    const username = window.localStorage.getItem("username");
+    
     if (token) {
         return (
             <div className="loggin-control"> 
@@ -26,7 +26,7 @@ function LoginControl() {
             </div>
 
             <div className="navigation">
-                <Link>Sign In</Link>
+                <Link to="/login">Sign In</Link>
             </div>
         </div>
     )

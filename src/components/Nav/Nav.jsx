@@ -8,9 +8,7 @@ import userImage from "./sitting-1.svg";
 import LoginControl from "../LoginControl/LoginControl";
 
 function Nav() {
-    const token = window.localStorage.getItem("token");
-    const username = window.localStorage.getItem("username");
-
+    
     return (
         <div className="button-area">
 

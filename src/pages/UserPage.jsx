@@ -2,7 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from "react-router-dom";
 
 function UserPage() {
-    const [userData, setUserData] = useState(window.localStorage.getItem("username"));
+    const [userData, setUserData] = useState({
+        username: window.localStorage.getItem("username"),
+        email:"",
+        phone_number:"",
+        address:""
+    });
 
     const { username } = useParams();
 
