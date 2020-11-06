@@ -37,7 +37,6 @@ function LoginForm() {
             postData().then((response) => {
                 window.localStorage.setItem("token", response.token);
                 window.localStorage.setItem("username", credentials.username);
-                window.localStorage.setItem("userId", id);
                 history.push("/");
             });
         }
