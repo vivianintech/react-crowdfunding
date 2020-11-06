@@ -59,9 +59,7 @@ function Nav() {
                 </div>
             </div>
 
-            <div>
-                <LoginControl />
-            </div>
+            <LoginControl />
             
         </div>
     )

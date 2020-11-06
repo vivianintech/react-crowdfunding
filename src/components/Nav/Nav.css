@@ -85,12 +85,11 @@
 .loggin-control {
   display: flex;
   direction: row;
-  width: 120%;
-  padding-right: 20px;
-  justify-self: center;
+  margin-right: 20px;
+  justify-content: center;
 }
 
-.navigation h4 {
+.loggin-control .loggin-item {
   color: white;
   text-decoration: none;
   font-family: 'Syne Mono', monospace;
@@ -98,6 +97,9 @@
   font-weight: bold;
   border: solid;
   border-radius: 5px;
-  padding: 1%;
   width: 80px;
+  align-self: center;
+  padding: 2%;
+  text-align: center;
+  margin: 5px
 }

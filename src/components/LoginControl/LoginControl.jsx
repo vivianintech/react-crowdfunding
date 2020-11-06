@@ -29,15 +29,15 @@ function LoginControl() {
     if (token) {
         return (
             <div className="loggin-control">
-                <Link onClick={handleLogin}><h4>{ username }</h4></Link>
-                <Link onClick={handleLogout}>Logout</Link>
+                <Link className="loggin-item" onClick={handleLogin}>{ username }</Link>
+                <Link className="loggin-item" onClick={handleLogout}>Logout</Link>
             </div>
         )
     }
     return (
         <div className="loggin-control">
-            <Link onClick={handleSignUp}>Sign Up</Link>
-            <Link onClick={handleSignin}>Sign In</Link>
+            <Link className="loggin-item" onClick={handleSignUp}>Sign Up</Link>
+            <Link className="loggin-item" onClick={handleSignin}>Sign In</Link>
         </div>
     )
 };
