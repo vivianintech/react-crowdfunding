@@ -1,10 +1,15 @@
 import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 
-
 function LoginControl() {
     const token = window.localStorage.getItem("token");
     const username = window.localStorage.getItem("username");
+
+    const handleLogout = (e) => {
+        e.preventDefault();
+        window.localStorage.clear();
+        window.location.href = "/"
+    };
     
     if (token) {
         return (
@@ -13,8 +18,8 @@ function LoginControl() {
                     <Link to={`users/${username}`}><h4>{ username }</h4></Link>
                 </div>
 
-                <div className="navigation">
-                    <Link><h4>Log Out</h4></Link>
+                <div class="navigation">
+                    <Link onClick={handleLogout}>Logout</Link>
                 </div>
             </div>
         )
