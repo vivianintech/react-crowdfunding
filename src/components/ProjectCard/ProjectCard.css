@@ -26,18 +26,15 @@
 
 .project-wrapper-tittle {
     font-family: 'Roboto', sans-serif;
-    background-color: #672901;
+    /* background-color: #672901; */
+    background-color: #404040;
     color: white;
     font-size: 20px;
     margin-top: -2%;
-    border-bottom-left-radius: 5%;
-    border-bottom-right-radius: 5%;
 }
 
 .project-wrapper-tittle h3 {
     justify-self: center;
     text-align: center;
     margin-top: 0.5%;
-    border-bottom-left-radius: 2%;
-    border-bottom-right-radius: 2%;
 }
