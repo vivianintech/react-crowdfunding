@@ -16,6 +16,9 @@ body {
   text-align: justify;
   display: flex;
   direction: row;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%
 }
 
 .vision-text {
@@ -30,12 +33,24 @@ body {
   width: 50%;
 }
 
+.our-projects {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+  padding-left: 2%
+}
+
 .project-list {
   display: flex;
   flex-wrap: wrap;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
 }
 
 .project-card {
-  border: solid;
-  width: 25%;
+  border: transparent;
+  width: 30%;
+  height: 240px;
+  text-decoration: none;
 }

@@ -2,30 +2,42 @@
 
 .project-card {
     width: 100%;
-    padding: 2%;
-    text-align: center;
+    padding: 0%;
     margin: auto;
     margin-top: 2%;
     margin-bottom: 2%;
-}
-
-.project-wrapper {
     display: flex;
-    direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    text-decoration: none;
+    border-radius: 2%;
 }
 
 .project-card img {
-    border-radius: 50%;
-    height: 180px;
-    width: 180px;
-    margin-top: .5%;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+    width: 100%;
+    height: 200px;
 }
-.project-card h3 {
-    font-family: 'Roboto', sans-serif;
+
+.project-wrapper {
     text-decoration: none;
-    font-size: 40px;
-    color: #672901;
+}
+
+.project-wrapper-tittle {
+    font-family: 'Roboto', sans-serif;
+    background-color: #672901;
+    color: white;
+    font-size: 20px;
+    margin-top: -2%;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+}
+
+.project-wrapper-tittle h3 {
+    justify-self: center;
+    text-align: center;
+    margin-top: 0.5%;
+    border-bottom-left-radius: 2%;
+    border-bottom-right-radius: 2%;
 }

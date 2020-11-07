@@ -23,13 +23,17 @@ function HomePage() {
                 <h1>Our Vision</h1>
                 <p>In Vietnam, many children living in rural area or in poor families cannot afford to buy computers or laptops to study. This limits their ability to approach with internet, free education resources and other opportunities.
                 My project aims to gather second hand computers/laptops and/or useful spare parts that can build up computers and laptops to bring 100 computers and laptops to those children in need of these modern devices.</p>
-                <h4>
+                <button>
                     <Link to="/project/create">Create Your Project Here</Link>
-                </h4>
+                </button>
             </div>
             <img src={VisionImage}/>
         </div>
-        
+
+        <div className="our-projects">
+            <h1>Our Projects</h1>
+        </div>
+            
             <div className="project-list">
                 {projectList.map((projectData, key) => {
                     return <ProjectCard key={key} projectData={projectData}/>;
