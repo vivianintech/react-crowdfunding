@@ -24,7 +24,7 @@ function HomePage() {
                 <p>In Vietnam, many children living in rural area or in poor families cannot afford to buy computers or laptops to study. This limits their ability to approach with internet, free education resources and other opportunities.
                 My project aims to gather second hand computers/laptops and/or useful spare parts that can build up computers and laptops to bring 100 computers and laptops to those children in need of these modern devices.</p>
                 <button>
-                    <Link to="/project/create">Create Your Project Here</Link>
+                    <Link className="button" to="/project/create">Create Your Project</Link>
                 </button>
             </div>
             <img src={VisionImage}/>

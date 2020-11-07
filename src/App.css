@@ -4,12 +4,22 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: #EEEDE7;
+  /* background-color: #EEEDE7; */
+  /* background-color: white; */
+  background-color: #F9F1F0;
 }
 
 .project-space {
   margin: 1%;
-  
+}
+
+.project-space .button {
+  text-decoration: none;
+  color: black;
+}
+
+.button:hover {
+  color: #b9b9b9;
 }
 
 .vision {
