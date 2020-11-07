@@ -18,33 +18,46 @@ function ProjectPage() {
     }, []);
 
     return (
-        <div>
-            <h1>{projectData.title}</h1>
-            <h2>Project mission: {projectData.description}</h2>
-            <h4>Created at: {moment(`${projectData.date_created}`).format('DD-MM-YYYY')}</h4>
-            <h3>{`Status: ${projectData.is_open}`}</h3>
-            <h3>Pledges:</h3>
-            <ul>
-                {projectData.pledges.map((pledgeData) =>{
-                    return (
-                        <li>
-                            {pledgeData.amount} from {pledgeData.supporter}
-                        </li>
-                    )
-                })}
-            </ul>
-            <Link className="create-pledge" to={`/pledge/create`}>
-                Donate to the project <br></br>
-            </Link>
+        <div className="project-page-wrapper">
+            <div className="project-data-wrapper">
+                <div className="project-data">
+                    <h1>{projectData.title}</h1>
+                    <h2>Project mission: {projectData.description}</h2>
+                    <h4>Created at: {moment(`${projectData.date_created}`).format('DD-MM-YYYY')}</h4>
+                    <h3>{`Status: ${projectData.is_open}`}</h3>
+                </div>
 
-            <Link className="update-project" to={`/project/update`}>
-                Update this project <br></br>
-            </Link>
+                <div className="project-pledge">
+                    <h3>Pledges:</h3>
+                    <ul>
+                        {projectData.pledges.map((pledgeData) =>{
+                            return (
+                                <li>
+                                    {pledgeData.amount} from {pledgeData.supporter}
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </div>
 
-            <Link className="delete-project" to={`/project/delete`}>
-                Delete this project
-            </Link>
+                <div className="related-actions">
+                    <Link className="create-pledge" to={`/pledge/create`}>
+                        Donate to the project <br></br>
+                    </Link>
 
+                    <Link className="update-project" to={`/project/update`}>
+                        Update this project <br></br>
+                    </Link>
+
+                    <Link className="delete-project" to={`/project/delete`}>
+                        Delete this project
+                    </Link>
+                </div>
+            </div>
+            
+            <div className="project-image">
+                <img src={projectData.image}/>
+            </div>
         </div>
     )
 }
