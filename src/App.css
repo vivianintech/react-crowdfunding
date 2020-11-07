@@ -1,24 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-.project-space {
-  display: flex;
-  direction: column;
-  margin: 1%;
-  justify-content: center;
-}
-
-#project-list {
-  width: 30%;
-}
-
-.vision {
-  width: 30%;
-  justify-content: center;
-}
-
 body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
   background-color: #EEEDE7;
+}
+
+.project-space {
+  margin: 1%;
+  
+}
+
+.vision {
+  text-align: justify;
+  display: flex;
+  direction: row;
+}
+
+.vision-text {
+  width: 50%;
+  align-self: center;
+  padding: 2%;
+}
+
+.vision img {
+  border-radius: 2%;
+  height: auto;
+  width: 50%;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  border: solid;
+  width: 25%;
 }
