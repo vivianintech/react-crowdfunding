@@ -23,8 +23,9 @@ function ProjectPage() {
                 <div className="project-data">
                     <h1>{projectData.title}</h1>
                     <h2>Project mission: {projectData.description}</h2>
-                    <h4>Created at: {moment(`${projectData.date_created}`).format('DD-MM-YYYY')}</h4>
+                    <h3>Project Goal: A${projectData.goal}</h3>
                     <h3>{`Status: ${projectData.is_open}`}</h3>
+                    <h4>Created at: {moment(`${projectData.date_created}`).format('DD-MM-YYYY')}</h4>
                 </div>
 
                 <div className="project-pledge">
