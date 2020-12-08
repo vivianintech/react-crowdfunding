@@ -30,11 +30,20 @@ function ProjectPage() {
 };
 
     return (
-        <form>
-            <div>Are you sure you want to delete this project?</div>
-            <button type="submit" onClick={handleProjectDelete}>Delete Project</button>
-            <button type="reset" onClick={handleProjectCancel}>Keep This Project</button>
-        </form>
+        <div className ="signup-wrapper">
+            <form className="signup-form">
+                <div className="signup-header">Are you sure you want to delete this project?</div>
+
+                <div className="loggin-button">
+                    <button class="submitButton" type="submit" onClick={handleProjectDelete}>Delete Project</button>
+                    <button class="cancelButton" onClick={handleProjectCancel}>Keep This Project</button>
+                </div>
+                
+            </form>
+
+            <img className="signup-image" src="https://cdn.domestika.org/c_fill,dpr_auto,t_base_params.format_jpg/v1583431085/blog-post-covers/000/003/017/3017-original.jpg"/>
+        </div>
+        
     )
 }
 

@@ -53,7 +53,7 @@ function Nav() {
                     </div>
 
                     <div className="home-button">
-                        <Link className="nav-item" to="/contact">CONTACT</Link>
+                        <a className="nav-item" href="https://vivianqutau.github.io/vivianqutau/index.html">CONTACT</a>
                     </div>
                     
                 </div>

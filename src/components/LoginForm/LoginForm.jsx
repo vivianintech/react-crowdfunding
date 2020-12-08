@@ -81,13 +81,13 @@ function LoginForm() {
                 </div>
                 
                 <div className="loggin-button">
-                    <button onClick={handleCancel}>Cancel</button>
-                    <button type="submit" onClick={handleSubmit}>Login</button>
+                <button class="submitButton" type="submit" onClick={handleSubmit}>LOGIN</button>
+                    <button class="cancelButton" onClick={handleCancel}>CANCEL</button>
                 </div>
 
                 <div className="redirect-link">
-                    <Link>Reset Password</Link>
-                    <Link to={`/users`}>Sign Up</Link>
+                    <Link id="Link">Reset Password</Link>
+                    <Link id="Link" to={`/users`}>Sign Up</Link>
                 </div>
                 
             </form>

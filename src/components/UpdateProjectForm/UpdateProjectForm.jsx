@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
 function ProjectPage() {
 
@@ -69,30 +69,51 @@ function ProjectPage() {
         }
     };
 
+    const handleCancel = (e) => {
+        e.preventDefault();
+        history.push("/");
+        window.location.reload(true);
+    };
+
     return (
-        <form>
-            <div>
-            <label htmlFor="title">Project Title</label>
-                <input type="text" id="title" value={projectData.title} autoComplete="off" onChange={handleProjectChange}/>
-            </div>
+        <div className ="signup-wrapper">
+            <form className="signup-form">
+                <div className="signup-header">
+                    <h2>Update Your Project</h2>
+                    <Link to="/login">Please Sign In To Continue</Link>
+                </div>
 
-            <div>
-                <label htmlFor="description">Description</label>
-                <input type="text" id="description" value={projectData.description} autoComplete="off" onChange={handleProjectChange}/>
-            </div>
+                <div className="signup-main">
+                    <div className="signup-main-1">
+                        <label htmlFor="title">Project Title</label>
+                        <input type="text" id="title" value={projectData.title} autoComplete="off" onChange={handleProjectChange}/>
+                    </div>
 
-            <div>
-                <label htmlFor="goal">Goal</label>
-                <input type="number" id="goal" value={projectData.goal} autoComplete="off" onChange={handleProjectChange}/>
-            </div>
+                    <div className="signup-main-1">
+                        <label htmlFor="description">Description</label>
+                        <input type="text" id="description" value={projectData.description} autoComplete="off" onChange={handleProjectChange}/>
+                    </div>
 
-            <div>
-                <label htmlFor="image">Image</label>
-                <input type="url" id="image" value={projectData.image} autoComplete="off" onChange={handleProjectChange}/>
-            </div>
+                    <div className="signup-main-1">
+                        <label htmlFor="goal">Goal</label>
+                        <input type="number" id="goal" value={projectData.goal} autoComplete="off" onChange={handleProjectChange}/>
+                    </div>
 
-            <button type="submit" onClick={handleProjectSubmit}>Update Project</button>
-        </form>
+                    <div className="signup-main-1">
+                        <label htmlFor="image">Image</label>
+                        <input type="url" id="image" value={projectData.image} autoComplete="off" onChange={handleProjectChange}/>
+                    </div>
+                </div>
+                
+                <div className="loggin-button">
+                    <button class="submitButton" type="submit" onClick={handleProjectSubmit}>SUBMIT</button>
+                    <button class="cancelButton" onClick={handleCancel}>CANCEL</button>
+                </div>
+            </form>
+            <img className="signup-image" src="https://cdn.domestika.org/c_fill,dpr_auto,t_base_params.format_jpg/v1583431085/blog-post-covers/000/003/017/3017-original.jpg"/>
+
+        </div>
+        
     )
 }
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
 function NewProjectForm() {
     const [projectData, setProjectData] = useState({
@@ -45,27 +45,44 @@ function NewProjectForm() {
         }
     };
 
-    return (
-        <form>
-            <div>
-                <label htmlFor="title">Project Title</label>
-                <input type="text" id="title" onChange={handleProjectChange}/>
-            </div>
-            <div>
-                <label htmlFor="description">Description</label>
-                <input type="text" id="description" onChange={handleProjectChange}/>
-            </div>
-            <div>
-                <label htmlFor="goal">Goal</label>
-                <input type="number" id="goal" onChange={handleProjectChange}/>
-            </div>
-            <div>
-                <label htmlFor="image">Image</label>
-                <input type="url" id="image" placeholder="https://via.placeholder.com/300.jpg" onChange={handleProjectChange}/>
-            </div>
+    const handleCancel = (e) => {
+        e.preventDefault();
+        history.push("/");
+        window.location.reload(true);
+    };
 
-            <button type="submit" onClick={handleProjectSubmit}>Submit</button>
-        </form>
+    return (
+        <div className="signup-wrapper">
+            <form className="signup-form">
+                <div className="signup-header">
+                    <h2>Let's Create Your Fun Project</h2>
+                    <Link id="Link" to={`/users`}>Please Sign Up If You Don't Have An Account </Link>
+                </div>
+                <div className="signup-main">
+                    <label htmlFor="title">Project Title</label>
+                    <input className="signup-main-1" type="text" id="title" onChange={handleProjectChange}/>
+                </div>
+                <div className="signup-main">
+                    <label htmlFor="description">Description</label>
+                    <input className="signup-main-1" type="text" id="description" onChange={handleProjectChange}/>
+                </div>
+                <div className="signup-main">
+                    <label htmlFor="goal">Goal</label>
+                    <input className="signup-main-1" type="number" id="goal" onChange={handleProjectChange}/>
+                </div>
+                <div className="signup-main">
+                    <label htmlFor="image">Image</label>
+                    <input className="signup-main-1" type="url" id="image" placeholder="Please Enter URL" onChange={handleProjectChange}/>
+                </div>
+                <div className="loggin-button">
+                    <button class="submitButton" type="submit" onClick={handleProjectSubmit}>SUBMIT</button>
+                    <button class="cancelButton" onClick={handleCancel}>CANCEL</button>
+                </div>
+
+            </form>
+            <img className="signup-image" src="https://cdn.domestika.org/c_fill,dpr_auto,t_base_params.format_jpg/v1583431085/blog-post-covers/000/003/017/3017-original.jpg"/>
+        </div>
+        
     );
 };
 

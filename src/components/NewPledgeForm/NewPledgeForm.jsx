@@ -49,27 +49,45 @@ function NewPledgeForm() {
         }
     };
 
-    return (
-        <form>
-            <div>
-                <label htmlFor="amount">Project amount</label>
-                <input type="text" id="amount" onChange={handleProjectChange}/>
-            </div>
-            <div>
-                <label htmlFor="comment">comment</label>
-                <input type="text" id="comment" onChange={handleProjectChange}/>
-            </div>
-            <div>
-                <label htmlFor="anonymous">anonymous</label>
-                <select type="boolean" id="anonymous" onChange={handleProjectChange}>
-                    <option  value="" disabled selected>--Select an option--</option>
-                    <option  value="true">Yes</option>
-                    <option  value="false">No</option>
-                </select>
-            </div>
+    const handleCancel = (e) => {
+        e.preventDefault();
+        history.push("/");
+        window.location.reload(true);
+    };
 
-            <button type="submit" onClick={handleProjectSubmit}>Submit</button>
-        </form>
+    return (
+        <div className ="signup-wrapper">
+            <form className="signup-form">
+                <div className="signup-header">
+                    <h2>Thank You For Making Donation Today!</h2>
+                </div>
+                <div className="signup-main">
+                    <div className="signup-main-1">
+                        <label htmlFor="amount" >Donation Amount</label>
+                        <input type="text" id="amount" placeholder="Amount in AUD" onChange={handleProjectChange}/>
+                    </div>
+                    <div className="signup-main-1">
+                        <label htmlFor="comment">Your comment</label>
+                        <input type="text" placeholder="Your Comment" id="comment" onChange={handleProjectChange}/>
+                    </div>
+                    <div className="signup-main-1">
+                        <label htmlFor="anonymous">Would you like to be anonymous?</label>
+                        <select className="dropdown" type="boolean" id="anonymous" onChange={handleProjectChange}>
+                            <option  value="" disabled selected>--Select an option--</option>
+                            <option  value="true">Yes</option>
+                            <option  value="false">No</option>
+                        </select>
+                    </div>
+                    <div className="loggin-button">
+                        <button class="submitButton" type="submit" onClick={handleProjectSubmit}>SUBMIT</button>
+                        <button class="cancelButton" onClick={handleCancel}>CANCEL</button>
+                    </div>
+                </div>
+                
+            </form>
+            <img className="signup-image" src="https://cdn.domestika.org/c_fill,dpr_auto,t_base_params.format_jpg/v1583431085/blog-post-covers/000/003/017/3017-original.jpg"/>
+        </div>
+        
     );
 };
 

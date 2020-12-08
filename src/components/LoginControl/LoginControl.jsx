@@ -30,14 +30,14 @@ function LoginControl() {
         return (
             <div className="loggin-control">
                 <Link className="loggin-item" onClick={handleLogin}>{ username }</Link>
-                <Link className="loggin-item" onClick={handleLogout}>Logout</Link>
+                <Link className="loggin-item" onClick={handleLogout}>LOG OUT</Link>
             </div>
         )
     }
     return (
         <div className="loggin-control">
-            <Link className="loggin-item" onClick={handleSignUp}>Sign Up</Link>
-            <Link className="loggin-item" onClick={handleSignin}>Sign In</Link>
+            <Link className="loggin-item" onClick={handleSignUp}>SIGN UP</Link>
+            <Link className="loggin-item" onClick={handleSignin}>SIGN IN</Link>
         </div>
     )
 };
